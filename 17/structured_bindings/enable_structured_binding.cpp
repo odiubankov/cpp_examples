@@ -43,8 +43,10 @@ struct std::tuple_element<Index, Person> {
 
 // Getters for corresponding elements
 template <std::size_t Index, typename PersonT>
-decltype(auto) get_person(PersonT&& person) {
+decltype(auto) get(PersonT&& person) {
   static_assert(Index < std::tuple_size<Person>::value);
+  static_assert(
+      std::is_same<Person, typename std::decay<decltype(person)>::type>::value);
 
   if constexpr (Index == 0)
     return person.getName();
@@ -52,21 +54,6 @@ decltype(auto) get_person(PersonT&& person) {
     return person.getSurname();
   else
     return person.getAge();
-}
-
-template <std::size_t Index>
-decltype(auto) get(Person& person) {
-  return get_person<Index>(person);
-}
-
-template <std::size_t Index>
-decltype(auto) get(Person&& person) {
-  return get_person<Index>(std::move(person));
-}
-
-template <std::size_t Index>
-decltype(auto) get(const Person& person) {
-  return get_person<Index>(person);
 }
 
 TEST(structured_bindings, enable_in_class_ref) {
