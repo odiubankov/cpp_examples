@@ -89,7 +89,25 @@ def _impl(ctx):
                     ]),
                 ),
             ],
-        )
+        ),
+        feature(
+            name = "warnings",
+            enabled = True,
+            flag_sets = [
+                flag_set(
+                    actions = all_cpp_compile_actions,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-Wall",
+                                "-Wextra",
+                                "-Werror",
+                            ],
+                        ),
+                    ],
+                ),
+            ],
+        ),
     ]
     return cc_common.create_cc_toolchain_config_info(
         ctx = ctx,
