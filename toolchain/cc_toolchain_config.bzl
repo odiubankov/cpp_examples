@@ -101,6 +101,7 @@ def _impl(ctx):
                             flags = [
                                 "-Wall",
                                 "-Wextra",
+                                "-Wimplicit-fallthrough",
                                 "-Werror",
                             ],
                         ),
