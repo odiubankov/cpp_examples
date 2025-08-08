@@ -5,7 +5,7 @@ cc_test(
         "switch_init.cpp",
     ],
     deps = [
-        "@gtest",
-        "@gtest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
 )

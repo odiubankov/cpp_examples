@@ -2,7 +2,7 @@ cc_test(
     name = "enum_init",
     srcs = ["enum_init.cpp"],
     deps = [
-        "@gtest",
-        "@gtest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
 )

@@ -5,7 +5,7 @@ cc_test(
         "structured_bindings.cpp",
     ],
     deps = [
-        "@gtest",
-        "@gtest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
 )

@@ -2,7 +2,7 @@ cc_test(
     name = "fallthrough",
     srcs = ["fallthrough.cpp"],
     deps = [
-        "@gtest",
-        "@gtest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
 )

@@ -2,7 +2,7 @@ cc_test(
     name = "aggregate_extensions",
     srcs = ["aggregate_extensions.cpp"],
     deps = [
-        "@gtest",
-        "@gtest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
 )
