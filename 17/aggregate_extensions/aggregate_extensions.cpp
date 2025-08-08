@@ -13,8 +13,8 @@ struct B : A {
 };
 
 TEST(aggregate_extension, extension_in_construct) {
-  B b{{1}, 2};
-  ASSERT_EQ(1, b.a_);
+  B b{{}, 2};
+  ASSERT_EQ(0, b.a_);
   ASSERT_EQ(2, b.b_);
 }
 
