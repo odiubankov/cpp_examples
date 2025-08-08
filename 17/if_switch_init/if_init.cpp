@@ -1,5 +1,9 @@
 #include "gtest/gtest.h"
 
+// C++17 introduces the ability to initialize variables in an if statement, which can help avoid scope pollution.
+
+namespace {
+
 bool true_case() { return true; }
 
 TEST(if_init, test) {
@@ -12,4 +16,6 @@ TEST(if_init, test) {
   const auto foo = false;
   ASSERT_FALSE(bar);
   ASSERT_FALSE(foo);
+}
+
 }

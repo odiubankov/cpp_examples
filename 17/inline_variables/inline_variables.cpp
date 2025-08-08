@@ -1,5 +1,11 @@
 #include "gtest/gtest.h"
 
+// C++17 introduces inline variables, which allow static member variables to be defined in the class declaration
+
+#include <string>
+
+namespace {
+
 class ClassWithInlineVariable {
  public:
   inline static const std::string defined_in_class = "defined_in_class";
@@ -26,3 +32,5 @@ constexpr int ClassWithImplicitlyInlineVariable::value;
 TEST(inline_variables, implicit_inline) {
   ASSERT_EQ(ClassWithImplicitlyInlineVariable::value, 1);
 }
+
+}  // namespace

@@ -1,5 +1,9 @@
 #include "gtest/gtest.h"
 
+// We can initialize an enum class with a value directly.
+
+namespace {
+
 enum class Fruit : int {
   Banana = 10,
   Apple = 20,
@@ -11,4 +15,6 @@ enum class Fruit : int {
 TEST(enum_init, test) {
   const Fruit fruit{50};
   ASSERT_EQ(fruit, Fruit::Mandarine);
+}
+
 }

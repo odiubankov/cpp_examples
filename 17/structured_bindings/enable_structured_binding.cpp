@@ -3,6 +3,8 @@
 
 #include "gtest/gtest.h"
 
+// C++17 introduces structured bindings, which allow unpacking of class members into variables.
+
 // Class with support of structured binding
 class Person {
  public:

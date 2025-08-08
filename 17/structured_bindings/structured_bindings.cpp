@@ -2,6 +2,10 @@
 
 #include "gtest/gtest.h"
 
+// C++17 introduces structured bindings, which allow unpacking of class members into variables.
+
+namespace {
+
 // Create structured binding to struct members
 // use assignment initialization
 TEST(structured_bindings, structure) {
@@ -85,4 +89,6 @@ TEST(structured_binding, underlying_type) {
                              decltype(first)>::value));
   ASSERT_TRUE(
       (std::is_same<decltype(type_with_values.first), decltype(first)>::value));
+}
+
 }
