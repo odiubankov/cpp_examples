@@ -3,7 +3,8 @@
 
 #include "gtest/gtest.h"
 
-// C++17 introduces the noexcept in type specifiers, which can be used to indicate that a function pointer or reference is noexcept.
+// C++17 introduces the noexcept in type specifiers, which can be used to
+// indicate that a function pointer or reference is noexcept.
 
 namespace {
 
@@ -18,4 +19,4 @@ TEST(noexcept_in_type, test) {
   ASSERT_FALSE(res);
 }
 
-}
+}  // namespace

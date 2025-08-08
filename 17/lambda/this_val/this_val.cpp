@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-// C++17 allows lambdas to capture `this` by value, which can be useful for accessing member variables.
+// C++17 allows lambdas to capture `this` by value, which can be useful for
+// accessing member variables.
 
 namespace {
 
@@ -11,10 +12,7 @@ class A {
     return [*this]() { return foo_; };
   }
 
-  void set_foo(int value) {
-    foo_ = value;
-  }
-
+  void set_foo(int value) { foo_ = value; }
 };
 
 TEST(lambda_this_val, test) {

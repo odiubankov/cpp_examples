@@ -2,7 +2,8 @@
 
 #include "gtest/gtest.h"
 
-// C++17 introduces constexpr lambdas, allowing the use of lambdas in constant expressions.
+// C++17 introduces constexpr lambdas, allowing the use of lambdas in constant
+// expressions.
 
 namespace {
 
@@ -12,4 +13,4 @@ TEST(constexpr_lambda, test) {
   ASSERT_EQ(foo.size(), 4);
 }
 
-}
+}  // namespace

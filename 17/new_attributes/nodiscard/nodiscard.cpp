@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-// C++17 introduces the [[nodiscard]] attribute, which can be used to indicate that a function's return value should not be ignored.
+// C++17 introduces the [[nodiscard]] attribute, which can be used to indicate
+// that a function's return value should not be ignored.
 
 namespace {
 
@@ -22,4 +23,4 @@ TEST(attribute_nodiscard, struct_test) {
   ASSERT_TRUE(get_struct().bar);
 }
 
-}
+}  // namespace

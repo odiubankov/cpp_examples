@@ -2,7 +2,9 @@
 
 namespace {
 
-// C++17 introduces guaranteed evaluation order for expressions, which means that the order of evaluation of function arguments and sub-expressions is well-defined.
+// C++17 introduces guaranteed evaluation order for expressions, which means
+// that the order of evaluation of function arguments and sub-expressions is
+// well-defined.
 
 int foo(int& var) {
   ++var;

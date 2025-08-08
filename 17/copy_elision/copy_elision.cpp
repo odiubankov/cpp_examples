@@ -4,7 +4,8 @@
 // 1. Named return value optimization (NRVO) - the compiler optimizes the return
 //    of a local object by constructing it directly in the caller's context.
 // 2. Copy elision - the compiler optimizes the copy of an object by eliminating
-//    the copy operation entirely, allowing the object to be constructed directly
+//    the copy operation entirely, allowing the object to be constructed
+//    directly
 
 namespace {
 
@@ -31,4 +32,4 @@ TEST(copy_elision, test) {
   ASSERT_EQ(a.foo, 10);
 }
 
-}
+}  // namespace

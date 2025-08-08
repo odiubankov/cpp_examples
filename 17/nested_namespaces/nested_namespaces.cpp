@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-// C++17 introduces nested namespaces, allowing for cleaner organization of code by grouping related namespaces together.
+// C++17 introduces nested namespaces, allowing for cleaner organization of code
+// by grouping related namespaces together.
 
 namespace {
 
@@ -10,4 +11,4 @@ bool f() { return true; }
 
 TEST(nested_namespaces, test) { ASSERT_TRUE(foo::bar::f()); }
 
-}
+}  // namespace

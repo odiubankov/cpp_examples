@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-// It was not possible to use aggregate initialization until C++17 if class has a base class. 
+// It was not possible to use aggregate initialization until C++17 if class has
+// a base class.
 
 namespace {
 
@@ -24,4 +25,4 @@ TEST(aggregate_extension, no_extension_in_construct) {
   ASSERT_EQ(2, b.b_);
 }
 
-}
+}  // namespace

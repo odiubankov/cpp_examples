@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-// C++17 introduces inline variables, which allow static member variables to be defined in the class declaration
+// C++17 introduces inline variables, which allow static member variables to be
+// defined in the class declaration
 
 #include <string>
 

@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-// C++17 introduces the ability to initialize variables in an if statement, which can help avoid scope pollution.
+// C++17 introduces the ability to initialize variables in an if statement,
+// which can help avoid scope pollution.
 
 namespace {
 
@@ -18,4 +19,4 @@ TEST(if_init, test) {
   ASSERT_FALSE(foo);
 }
 
-}
+}  // namespace

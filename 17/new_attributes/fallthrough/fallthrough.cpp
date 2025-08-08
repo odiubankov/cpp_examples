@@ -2,7 +2,9 @@
 
 #include "gtest/gtest.h"
 
-// C++17 introduces the [[fallthrough]] attribute, which can be used to indicate that a case in a switch statement intentionally falls through to the next case.
+// C++17 introduces the [[fallthrough]] attribute, which can be used to indicate
+// that a case in a switch statement intentionally falls through to the next
+// case.
 
 namespace {
 

@@ -17,4 +17,4 @@ TEST(enum_init, test) {
   ASSERT_EQ(fruit, Fruit::Mandarine);
 }
 
-}
+}  // namespace

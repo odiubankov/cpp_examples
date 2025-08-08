@@ -2,7 +2,8 @@
 
 #include "gtest/gtest.h"
 
-// C++17 introduces structured bindings, which allow unpacking of class members into variables.
+// C++17 introduces structured bindings, which allow unpacking of class members
+// into variables.
 
 namespace {
 
@@ -91,4 +92,4 @@ TEST(structured_binding, underlying_type) {
       (std::is_same<decltype(type_with_values.first), decltype(first)>::value));
 }
 
-}
+}  // namespace

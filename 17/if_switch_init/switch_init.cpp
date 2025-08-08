@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-// C++17 introduces the ability to initialize variables in a switch statement, which can help avoid scope pollution.
+// C++17 introduces the ability to initialize variables in a switch statement,
+// which can help avoid scope pollution.
 
 namespace {
 

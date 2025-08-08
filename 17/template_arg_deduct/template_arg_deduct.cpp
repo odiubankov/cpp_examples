@@ -2,7 +2,8 @@
 
 #include "gtest/gtest.h"
 
-// C++17 introduces template argument deduction for class templates, which allows the compiler to deduce template arguments from constructor arguments.
+// C++17 introduces template argument deduction for class templates, which
+// allows the compiler to deduce template arguments from constructor arguments.
 
 namespace {
 
@@ -13,4 +14,4 @@ TEST(template_arg_deduct, test) {
   ASSERT_TRUE(res);
 }
 
-}
+}  // namespace

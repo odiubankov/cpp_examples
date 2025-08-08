@@ -2,7 +2,8 @@
 
 #include "gtest/gtest.h"
 
-// C++17 adds support for auto brace initialization, allowing the use of braces to initialize variables with type deduction.
+// C++17 adds support for auto brace initialization, allowing the use of braces
+// to initialize variables with type deduction.
 
 namespace {
 
@@ -12,4 +13,4 @@ TEST(auto_brace_init, test) {
   ASSERT_TRUE(res);
 }
 
-}
+}  // namespace
