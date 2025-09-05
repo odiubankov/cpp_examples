@@ -1,4 +1,8 @@
-load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
+load(
+    "@bazel_tools//tools/build_defs/cc:action_names.bzl",
+    "ACTION_NAMES",
+)
+
 load(
     "@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
     "feature",
@@ -26,7 +30,7 @@ def _impl(ctx):
     tool_paths = [
         tool_path(
             name = "gcc",
-            path = "/usr/bin/clang-12",
+            path = "/usr/bin/clang-21",
         ),
         tool_path(
             name = "ld",
@@ -38,11 +42,7 @@ def _impl(ctx):
         ),
         tool_path(
             name = "cpp",
-            path = "/usr/bin/clang-cpp-12",
-        ),
-        tool_path(
-            name = "gcov",
-            path = "/bin/false",
+            path = "/usr/bin/clang-cpp-21",
         ),
         tool_path(
             name = "nm",
@@ -57,6 +57,7 @@ def _impl(ctx):
             path = "/bin/false",
         ),
     ]
+
     features = [
         feature(
             name = "default_linker_flags",
@@ -68,6 +69,7 @@ def _impl(ctx):
                         flag_group(
                             flags = [
                                 "-lstdc++",
+                                "-lm"
                             ],
                         ),
                     ]),
@@ -83,7 +85,7 @@ def _impl(ctx):
                     flag_groups = ([
                         flag_group(
                             flags = [
-                                "-std=c++17",
+                                "-std=c++23",
                             ],
                         ),
                     ]),
@@ -101,6 +103,7 @@ def _impl(ctx):
                             flags = [
                                 "-Wall",
                                 "-Wextra",
+                                "-Wpedantic",
                                 "-Wimplicit-fallthrough",
                                 "-Werror",
                             ],
@@ -110,26 +113,20 @@ def _impl(ctx):
             ],
         ),
     ]
+
     return cc_common.create_cc_toolchain_config_info(
         ctx = ctx,
         features = features,
         cxx_builtin_include_directories = [
-            "/usr/lib/llvm-12/lib/clang/12.0.0/include/",
+            "/usr/lib/llvm-21/lib/clang/21/include",
             "/usr/include",
         ],
-        toolchain_identifier = "local",
-        host_system_name = "local",
-        target_system_name = "local",
-        target_cpu = "local",
-        target_libc = "unknown",
+        toolchain_identifier = "k8-toolchain",
         compiler = "clang",
-        abi_version = "unknown",
-        abi_libc_version = "unknown",
         tool_paths = tool_paths,
     )
 
 cc_toolchain_config = rule(
     implementation = _impl,
-    attrs = {},
     provides = [CcToolchainConfigInfo],
 )
