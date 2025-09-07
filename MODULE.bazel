@@ -2,5 +2,9 @@ bazel_dep(name = "googletest", version = "1.17.0")
 bazel_dep(name = "platforms", version = "1.0.0")
 
 register_toolchains(
-    "//toolchain:cc_toolchain_for_linux_x86_64"
+    "//toolchain/clang"
+)
+
+register_toolchains(
+    "//toolchain/gcc"
 )
