@@ -4,3 +4,7 @@ bazel_dep(name = "platforms", version = "1.0.0")
 register_toolchains(
     "//toolchain/clang"
 )
+
+register_toolchains(
+    "//toolchain/gcc"
+)
