@@ -126,7 +126,7 @@ def _impl(ctx):
         tool_paths = tool_paths,
     )
 
-cc_toolchain_config = rule(
+clang_toolchain_config_info = rule(
     implementation = _impl,
     provides = [CcToolchainConfigInfo],
 )
