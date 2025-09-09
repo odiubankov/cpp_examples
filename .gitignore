@@ -22,3 +22,4 @@
 # User-specific .bazelrc
 user.bazelrc
 MODULE.bazel.lock
+/.bazel_cache/

@@ -5,3 +5,9 @@ build:debug --strip=never
 build:debug --define=DEBUG=1
 build:debug --define=ENABLE_LOGGING=1
 build:debug --define=LOG_LEVEL=DEBUG
+
+build:clang --extra_toolchains=//toolchain/clang
+
+build:gcc --extra_toolchains=//toolchain/gcc
+
+build --disk_cache=./.bazel_cache
